@@ -1,0 +1,18 @@
+@import './base.css';
+
+body {
+  background: #151419;
+  color: #fbfbfb;
+}
+
+.smallText {
+  font-size: 12pt;
+}
+
+.mediumText {
+  font-size: 14pt;
+}
+
+.largeText {
+  font-size: 18pt;
+}
