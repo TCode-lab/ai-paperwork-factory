@@ -1,0 +1,15 @@
+<template lang="pug">
+
+  svg(width="14" height="14" viewBox="0 0 14 14" :fill="props.color" xmlns="http://www.w3.org/2000/svg")
+    path(d="M6 4.66667V1L9.66667 4.66667M1.33333 0C0.593333 0 0 0.593333 0 1.33333V12C0 12.3536 0.140476 12.6928 0.390524 12.9428C0.640573 13.1929 0.979711 13.3333 1.33333 13.3333H9.33333C9.68696 13.3333 10.0261 13.1929 10.2761 12.9428C10.5262 12.6928 10.6667 12.3536 10.6667 12V4L6.66667 0H1.33333Z")
+
+</template>
+
+<script setup>
+    const props = defineProps({
+      color: {
+        type: String,
+        default: "#FFFFFF"
+      }
+    })
+</script>

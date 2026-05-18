@@ -1,8 +1,11 @@
 <template lang="pug">
     div.spaceWrapper
         SideNavigationPanel(:routes="routes" @selectRoute="onSelectNavigationRoute")
-        FilesExplorer(v-if="activeViewId === 'projects'", :files="projects")
-        AppSettings(v-if="activeViewId === 'settings'")
+        div.view
+            div.filesExplorerView(v-if="activeViewId === 'projects'")
+                FilesExplorer(:files="projects")
+            div.appSettingsView(v-if="activeViewId === 'settings'")
+                AppSettings()
 </template>
 
 <script setup>
@@ -12,20 +15,20 @@ import AppSettings from '../components/AppSettings.vue';
 import { ref } from 'vue';
 
 // Иконки
-import projectsIcon from '../assets/icons/projects.svg'
-import settingsIcon from '../assets/icons/settings.svg'
+import IconProjects from '../components/icons/IconProjects.vue';
+import IconSettings from '../components/icons/IconSettings.vue';
 //
 
 const routes = [
     {
         id: "projects",
-        icon: projectsIcon,
-        title: "Проекты"
+        title: "Проекты",
+        iconComponent: IconProjects
     },
     {
         id: "settings",
-        icon: settingsIcon,
-        title: "Настройки"
+        title: "Настройки",
+        iconComponent: IconSettings
     }
 ]
 
@@ -50,8 +53,13 @@ const projects = [
 <style scoped>
 
 .spaceWrapper {
+    width: 100%;
     display: flex;
     flex-direction: row;
+}
+
+.view {
+    width: 100%;
 }
 
 </style>
