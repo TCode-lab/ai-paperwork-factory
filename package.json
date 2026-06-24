@@ -21,6 +21,7 @@
     "@electron-toolkit/preload": "^3.0.2",
     "@electron-toolkit/utils": "^4.0.0",
     "electron-updater": "^6.3.9",
+    "puppeteer": "^25.2.1",
     "vue-router": "^5.0.7"
   },
   "devDependencies": {

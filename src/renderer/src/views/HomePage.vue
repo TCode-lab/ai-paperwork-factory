@@ -22,12 +22,12 @@ import IconSettings from '../components/icons/IconSettings.vue';
 const routes = [
     {
         id: "projects",
-        title: "Проекты",
+        title: "Все",
         iconComponent: IconProjects
     },
     {
         id: "settings",
-        title: "Настройки",
+        title: "Избранное",
         iconComponent: IconSettings
     }
 ]

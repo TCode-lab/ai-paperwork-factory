@@ -4,9 +4,8 @@ import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
 
 function createWindow() {
-  // Create the browser window.
   const mainWindow = new BrowserWindow({
-    title: "AI paperwork fabric",
+    title: "zakupki lister",
     width: 900,
     height: 670,
     show: false,
