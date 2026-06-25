@@ -30,8 +30,8 @@ import { ref } from 'vue'
 <style scoped>
     .sidebar {
         background: #1B1B1E;
-        min-width: 250px;
-        height: 100vh;
+        min-width: 220px;
+        height: calc(100vh - 28px);
         gap: 8px;
         padding: 8px;
     }

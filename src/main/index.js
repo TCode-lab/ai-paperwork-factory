@@ -2,6 +2,8 @@ import { app, shell, BrowserWindow, ipcMain } from 'electron'
 import { join } from 'path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
+import { indexPage } from './workers/indexer'
+import { saveRows, loadRows } from './workers/fileManager'
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
@@ -51,6 +53,18 @@ app.whenReady().then(() => {
 
   // IPC test
   ipcMain.on('ping', () => console.log('pong'))
+
+  ipcMain.handle('indexPage', async (event, ...args) => {
+      return await indexPage(...args);
+  })
+
+  ipcMain.handle('saveRows', async (event, ...args) => {
+      return await saveRows(...args);
+  })
+
+  ipcMain.handle('loadRows', async (event, ...args) => {
+      return await loadRows();
+  })
 
   createWindow()
 

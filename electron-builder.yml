@@ -1,5 +1,5 @@
-appId: com.electron.app
-productName: test-electron-app
+appId: com.zakupki.app
+productName: zakupki
 directories:
   buildResources: build
 files:
@@ -11,7 +11,7 @@ files:
 asarUnpack:
   - resources/**
 win:
-  executableName: test-electron-app
+  executableName: zakupki
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}

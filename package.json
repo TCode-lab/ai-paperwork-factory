@@ -1,5 +1,5 @@
 {
-  "name": "test-electron-app",
+  "name": "zakupki",
   "version": "1.0.0",
   "description": "An Electron application with Vue",
   "main": "./out/main/index.js",
@@ -20,6 +20,8 @@
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.2",
     "@electron-toolkit/utils": "^4.0.0",
+    "cheerio": "^1.2.0",
+    "chrome-finder": "^1.0.7",
     "electron-updater": "^6.3.9",
     "puppeteer": "^25.2.1",
     "vue-router": "^5.0.7"
